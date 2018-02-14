@@ -39,7 +39,7 @@ public void tunebook()
 	{
 		String file = "ABC.txt";
 		TuneBook b = new TuneBook(file);
-		//System.out.println(d);
+		System.out.println(b);
 
 		
 		
