@@ -15,9 +15,21 @@ public class TuneBook
  public TuneBook(String filename)
     {
         loadTunes(filename);
+		
     }
 
+public  String toString()
+    {
+        StringBuffer sb = new StringBuffer();
+        for(String word:tunes)
+        {
+            sb.append(word + "," + word + 1);
+			//System.out.Println(sb);
+        }
 
+        return sb.toString();
+
+	}
 
     public void loadTunes( String filename)
     {
@@ -33,7 +45,7 @@ public class TuneBook
                 tunes.add(l);
 				
             }
-			System.out.println(tunes);
+			//System.out.println(tunes);
         }
         catch (IOException e)
         {
