@@ -15,7 +15,7 @@ public class TuneBook
  public TuneBook(String filename)
     {
         loadTunes(filename);
-		findTune("Irish Washerwoman, The", tunes);
+		//findTune("Irish Washerwoman, The", tunes);
 		
     }
 
@@ -68,7 +68,9 @@ public  String toString()
         }
     }
 	
-	public void findTune(String title,ArrayList tunes)
+	
+	//Function to search for the name of songs 
+/*	public void findTune(String title,ArrayList tunes)
 	{
 		String NameSong = ""; //each word is stored in singleWord and checked
         int occurances = 0;
@@ -88,12 +90,13 @@ public  String toString()
         System.out.println(occurances + " matches found for song" + title + ".");
         
 		
-	}
+	}*/
 	
+		//fuction to et each objets attributes
 	  /*  public void TunesTuneVals( ArrayList listoftunes ,String filename)
     {
 
-        // Adapted from: https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html
+      
         BufferedReader inputStream2 = null;
 
         try {
