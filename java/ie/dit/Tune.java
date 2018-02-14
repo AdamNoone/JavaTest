@@ -28,9 +28,24 @@ public void EachTune(int x,String title,String altTitle,String notation)
 	
 }
 
+public void tunebook()
+	{
+		String file = "ABC.txt";
+		TuneBook b = new TuneBook(file);
+		//System.out.println(d);
+
+		
+		
+	}
 /*public String toString()
     {
        //so put all the word in ABC.text into an arry list and the output all word that start with x or t
        //COME BACK TO 
 	}*/
+	
+	public static void main(String[] args)
+	{
+		Tune main = new Tune();
+		main.tunebook();
+	}
 }
