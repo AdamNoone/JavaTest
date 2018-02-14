@@ -23,7 +23,7 @@ public  String toString()
         StringBuffer sb = new StringBuffer();
         for(String word:tunes)
         {
-            sb.append(word + "," + word + 1);
+            sb.append(word + ",");
 			//System.out.Println(sb);
         }
 
@@ -45,7 +45,8 @@ public  String toString()
                 tunes.add(l);
 				
             }
-			//System.out.println(tunes);
+			System.out.println(tunes);
+			TunesTuneVals(tunes , filename);
         }
         catch (IOException e)
         {
@@ -57,6 +58,51 @@ public  String toString()
                 try
                 {
                     inputStream.close();
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+	
+	    public void TunesTuneVals( ArrayList listoftunes ,String filename)
+    {
+
+        // Adapted from: https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html
+        BufferedReader inputStream2 = null;
+
+        try {
+            inputStream2 = new BufferedReader(new FileReader(filename));
+            
+            String t;
+            while ((t = inputStream2.readLine()) != null) {
+                 /*if(t.startsWith("X"))
+				{
+					this.x = t;
+									
+				}*/
+				 if(t.startsWith("T"))
+				{
+					this.title = t;
+									
+				}
+					
+				
+            }
+			System.out.println(tunes);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        } 
+        finally 
+        {
+            if (inputStream2 != null) {
+                try
+                {
+                    inputStream2.close();
                 }
                 catch(Exception e)
                 {
