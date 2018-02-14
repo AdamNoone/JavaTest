@@ -15,7 +15,7 @@ public class TuneBook
  public TuneBook(String filename)
     {
         loadTunes(filename);
-		findTune("Irish Washerwoman, The",ArrayList tunes)
+		findTune("Irish Washerwoman, The", tunes);
 		
     }
 
@@ -76,9 +76,9 @@ public  String toString()
         //go through each word in the ArrayList
         for(String eachWord : tunes)
         {
-            namesong = eachWord;
+            NameSong = eachWord;
 
-            if(name.equals(title))
+            if(NameSong.contans(title))
             {
                 System.out.println(title + " if song was found in File" );
                 
