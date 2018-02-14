@@ -17,7 +17,13 @@ public class Tune
 	
 
 	
+public  String toString()
+    {
+        String s = x + ","  + title + "," + altTitle;
 
+        return s.toString();
+
+	}
 
 
 public void EachTune(int x,String title,String altTitle,String notation)
